@@ -3,10 +3,14 @@ package hello.member.service;
 import hello.member.domain.Member;
 import hello.member.repository.MemberRepository;
 import hello.member.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
